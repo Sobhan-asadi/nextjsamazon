@@ -1,3 +1,6 @@
+import HomeCarousel from "@/components/shared/home/HomeCarousel";
+import data from "@/lib/data";
+
 export default function HomePage() {
-  return <div>HomePage</div>;
+  return <HomeCarousel items={data.carousels} />;
 }
