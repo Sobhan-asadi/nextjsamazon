@@ -1,18 +1,19 @@
-import { ShoppingBagIcon, UserIcon } from "lucide-react";
+import { ShoppingCartIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function Menu() {
   return (
     <div className="flex justify-end">
       <nav className="flex w-full gap-3">
-        <Link href={"/signin"} className="flex flex-col items-center gap-1">
-          <UserIcon className="h-7 w-7" />
-          <span className="text-sm font-bold">Sign in</span>
+        <Link href={"/signin"} className="header-button flex items-center">
+          Hello, Sign in
         </Link>
 
-        <Link href={"/cart"} className="flex flex-col items-center gap-1">
-          <ShoppingBagIcon className="h-7 w-7" />
-          <span className="text-sm font-bold">Cart</span>
+        <Link href={"/cart"} className="header-button">
+          <div className="flex items-end">
+            <ShoppingCartIcon className="h-7 w-7" />
+            <span className="font-bold">Cart</span>
+          </div>
         </Link>
       </nav>
     </div>

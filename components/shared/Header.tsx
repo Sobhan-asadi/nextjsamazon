@@ -12,7 +12,7 @@ export default async function Header() {
   return (
     <header className="bg-black text-white">
       <div className="px-2">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between p-2">
           <div className="flex items-center">
             <Link
               href="/"
@@ -37,18 +37,19 @@ export default async function Header() {
           <Search />
         </div>
       </div>
-      <div className="mb-px flex items-center bg-gray-800 px-3">
+
+      <div className="mb-px flex h-12 items-center bg-gray-800 px-3">
         <Button
           variant="ghost"
-          className="header-button flex items-center gap-1 text-base hover:bg-gray-600 [&_svg]:size-5"
+          className="header-button flex h-full items-center gap-1 px-3 text-base hover:bg-gray-600 [&_svg]:size-5"
         >
           <MenuIcon />
-          All
+          <span>All</span>
         </Button>
-        <div className="flex max-h-12 flex-wrap items-center gap-3 overflow-hidden">
+        <div className="flex h-full flex-wrap items-center gap-3 overflow-hidden">
           {data.headerMenus.map((menu) => (
             <Link
-              className="header-button p-2"
+              className="header-button flex h-full items-center px-3"
               href={menu.href}
               key={menu.href}
             >
