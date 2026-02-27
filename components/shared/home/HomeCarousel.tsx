@@ -19,7 +19,7 @@ export default function HomeCarousel({
 }: {
   items: { image: string; url: string; title: string; buttonCaption: string }[];
 }) {
-  const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
+  const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
 
   return (
     <Carousel
@@ -60,8 +60,8 @@ export default function HomeCarousel({
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="left-0 md:left-12" />
-      <CarouselNext className="right-0 md:right-12" />
+      <CarouselPrevious className="left-2 md:left-12" />
+      <CarouselNext className="right-2 md:right-12" />
     </Carousel>
   );
 }
